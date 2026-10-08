@@ -1,0 +1,30 @@
+name: PHP static checks
+on:
+  push:
+    branches:
+      - 'integracao/**'
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo_sqlite, sqlite3
+          coverage: none
+      - name: PHP syntax checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' files < <(find . -type f -name '*.php' -not -path './vendor/*' -print0)
+          if (( ${#files[@]} == 0 )); then
+            echo 'No PHP files found'
+            exit 1
+          fi
+          for file in "${files[@]}"; do php -l "$file" >/dev/null; done
+          echo "Checked ${#files[@]} PHP files"
+      - name: Verify SQLite extension
+        run: php -r 'exit(extension_loaded("pdo_sqlite") ? 0 : 1);'
