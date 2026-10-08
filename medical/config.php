@@ -1,0 +1,1 @@
+<?php const APP_NAME='DrJulio'; const DB_PATH=__DIR__.'/storage/database.sqlite'; const SESSION_NAME='DRJULIO_SESSION';
