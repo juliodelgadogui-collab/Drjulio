@@ -1,1 +1,15 @@
-vendor/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+medical/storage/*
+!medical/storage/.gitkeep
+medical/uploads/*
+!medical/uploads/.gitkeep
+*.log
+.DS_Store
