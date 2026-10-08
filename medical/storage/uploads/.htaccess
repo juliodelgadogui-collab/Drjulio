@@ -1,0 +1,2 @@
+# Permitir apenas acesso local ou remover este .htaccess e servir via script PHP seguro
+Deny from all
