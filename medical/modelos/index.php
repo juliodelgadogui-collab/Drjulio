@@ -1,0 +1,1 @@
+<?php require __DIR__.'/../api/bootstrap.php';auth();?><!doctype html><html lang="pt-BR"><head><?php require __DIR__.'/../partials/head.php';?></head><body><main><h1>Modelos</h1><div class="panel"><p>Editor de atestado e laudo com campos variáveis será implementado aqui.</p></div></main></body></html>
