@@ -1,0 +1,1 @@
+<?php require __DIR__.'/api/bootstrap.php';$_SESSION=[];session_destroy();header('Location:login.php');exit;

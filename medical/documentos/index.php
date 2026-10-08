@@ -1,0 +1,1 @@
+<?php require __DIR__.'/../api/bootstrap.php';auth();?><!doctype html><html lang="pt-BR"><head><?php require __DIR__.'/../partials/head.php';?></head><body><main><h1>Documentos</h1><div class="panel"><h2>Atestado e Laudo</h2><p>O módulo terá modelos personalizados, variáveis, versionamento, assinatura e validação pública.</p></div></main></body></html>
