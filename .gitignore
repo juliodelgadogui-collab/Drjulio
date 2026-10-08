@@ -1,1 +1,17 @@
 vendor/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+.env.*
+!.env.example
+*.log
+/medical/storage/
+/medical/uploads/
+/medical/sessions/
+/medical/database/*.sqlite*
+/medical/database/*.db*
+.DS_Store
